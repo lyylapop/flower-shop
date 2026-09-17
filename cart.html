@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Корзина — Flower Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">🌷 Flower Shop</div>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html">Каталог</a>
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+        </nav>
+
+        <a href="cart.html" class="cart">🛒 Корзина</a>
+
+    </header>
+
+
+    <main>
+
+        <section class="cart-page">
+
+            <h1>Ваша корзина</h1>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-summary">
+
+                <div class="cart-total">
+                    Итого: <span id="cart-total">0</span> ₽
+                </div>
+
+                <button class="checkout-button">
+                    Оформить заказ
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

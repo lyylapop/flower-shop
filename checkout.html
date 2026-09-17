@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Оформление заказа — Flower Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">🌷 Flower Shop</div>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html">Каталог</a>
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+        </nav>
+
+        <a href="cart.html" class="cart">🛒 Корзина</a>
+
+    </header>
+
+
+    <main>
+
+        <section class="checkout-page">
+
+            <h1>Оформление заказа</h1>
+
+            <form class="checkout-form">
+
+                <div class="form-group">
+                    <label for="name">Имя и фамилия</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Введите ваше имя и фамилию"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                   <input
+    type="tel"
+    id="phone"
+    placeholder="+7 (___) ___-__-__"
+    required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="telegram">Никнейм в Telegram</label>
+                    <input
+                        type="text"
+                        id="telegram"
+                        placeholder="@username"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="city">Город</label>
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Введите город"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="address">Адрес доставки</label>
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Улица, дом, квартира"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Способ доставки</label>
+
+                    <div class="delivery-option">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="delivery"
+                                value="Курьером"
+                                checked
+                            >
+
+                            Доставка курьером
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="payment">Способ оплаты</label>
+
+                    <select id="payment" required>
+
+                        <option value="">
+                            Выберите способ оплаты
+                        </option>
+
+                        <option value="При получении">
+                            При получении
+                        </option>
+
+                        <option value="Онлайн">
+                            Онлайн
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="checkout-order">
+
+                    <h2>Ваш заказ</h2>
+
+                    <div id="checkout-items"></div>
+
+                    <div class="checkout-total">
+
+                        Итого:
+                        <span id="checkout-total">0</span> ₽
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="checkout-submit"
+                >
+                    Оформить заказ
+                </button>
+
+
+                <div
+                    id="checkout-message"
+                    class="checkout-message"
+                ></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>
