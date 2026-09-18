@@ -105,7 +105,7 @@ if (checkoutForm) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/order",
+                "https://flower-shop-server-08ew.onrender.com/order",
                 {
 
                     method: "POST",
