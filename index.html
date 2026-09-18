@@ -2,217 +2,414 @@
 <html lang="ru">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Flower Shop</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
     <header class="header">
 
-        <div class="logo">🌷 Flower Shop</div>
+        <div class="logo">
+            🌷 Flower Shop
+        </div>
+
 
         <nav class="nav">
-            <a href="#">Главная</a>
-            <a href="#">Каталог</a>
-            <a href="#">О нас</a>
-            <a href="#">Контакты</a>
+
+            <a href="#">
+                Главная
+            </a>
+
+            <a href="#products">
+                Каталог
+            </a>
+
+            <a href="#">
+                О нас
+            </a>
+
+            <a href="#">
+                Контакты
+            </a>
+
         </nav>
 
-        <a href="cart.html" class="cart">🛒 Корзина</a>
+
+       <a href="cart.html" class="cart">
+    🛒 Корзина <span id="cart-count">0</span>
+</a>
 
     </header>
 
 
+
     <main>
+
+
+        <!-- ГЛАВНЫЙ БЛОК -->
 
         <section class="hero">
 
+
             <div class="hero-content">
+
 
                 <p class="hero-small">
                     ЦВЕТЫ С ЛЮБОВЬЮ
                 </p>
+
 
                 <h1>
                     Цветы, которые<br>
                     говорят без слов
                 </h1>
 
+
                 <p class="hero-text">
                     Красивые букеты для особенных моментов
                 </p>
 
-                <a href="#" class="hero-button">
+
+                <a href="#products" class="hero-button">
                     Смотреть букеты
                 </a>
 
+
             </div>
 
+
             <div class="hero-image">
-                <img src="201rose.jpg" alt="Букет роз">
+
+                <img
+                    src="201rose.jpg"
+                    alt="Букет роз"
+                >
+
             </div>
+
 
         </section>
 
 
-        <section class="products">
 
-            <h2>Наши букеты</h2>
-            
+        <!-- КАТАЛОГ -->
+
+        <section class="products" id="products">
+
+
+            <h2>
+                Наши букеты
+            </h2>
+
+
+            <!-- КАТЕГОРИИ -->
+
             <div class="category-buttons">
 
-    <button class="category-button active" data-category="all">
-        Все
-    </button>
 
-    <button class="category-button" data-category="roses">
-        🌹 Розы
-    </button>
+                <button
+                    class="category-button active"
+                    data-category="all"
+                >
+                    Все
+                </button>
 
-    <button class="category-button" data-category="peonies">
-        🌸 Пионы
-    </button>
 
-    <button class="category-button" data-category="hydrangeas">
-        💐 Гортензии
-    </button>
+                <button
+                    class="category-button"
+                    data-category="roses"
+                >
+                    🌹 Розы
+                </button>
 
-    <button class="category-button" data-category="lilies">
-        🌷 Лилии
-    </button>
 
-    <button class="category-button" data-category="different">
-        💐 Разные
-    </button>
+                <button
+                    class="category-button"
+                    data-category="peonies"
+                >
+                    🌸 Пионы
+                </button>
 
-</div>
+
+                <button
+                    class="category-button"
+                    data-category="hydrangeas"
+                >
+                    💐 Гортензии
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="lilies"
+                >
+                    🌷 Лилии
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="different"
+                >
+                    💐 Разные
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ТОВАРЫ -->
 
             <div class="products-grid">
 
-                <div class="product-card" data-category="roses">
 
-                    <img src="201rose.jpg" alt="Букет Нежность, 201 роза">
+                <!-- БУКЕТ 1 -->
 
-                    <h3>Букет «Нежность». 201 роза</h3>
+                <div
+                    class="product-card"
+                    data-category="roses"
+                >
 
-                    <p class="product-price">22000 ₽</p>
+                    <img
+                        src="201rose.jpg"
+                        alt="Букет Нежность, 201 роза"
+                    >
+
+
+                    <h3>
+                        Букет «Нежность». 201 роза
+                    </h3>
+
+
+                    <p class="product-price">
+                        22000 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Нежность». 201 роза"
                         data-price="22000"
-                        data-image="201rose.jpg">
+                        data-image="201rose.jpg"
+                    >
                         🛒 В корзину
                     </button>
+
 
                 </div>
 
 
-                <div class="product-card" data-category="roses">
 
-                    <img src="11rose.jpg" alt="Алексин">
+                <!-- БУКЕТ 2 -->
 
-                    <h3>Букет «Алексин». 11 роз</h3>
+                <div
+                    class="product-card"
+                    data-category="roses"
+                >
 
-                    <p class="product-price">3475 ₽</p>
+                    <img
+                        src="11rose.jpg"
+                        alt="Алексин"
+                    >
+
+
+                    <h3>
+                        Букет «Алексин». 11 роз
+                    </h3>
+
+
+                    <p class="product-price">
+                        3475 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Алексин». 11 роз"
                         data-price="3475"
-                        data-image="11rose.jpg">
+                        data-image="11rose.jpg"
+                    >
                         🛒 В корзину
                     </button>
+
 
                 </div>
 
 
-               <div class="product-card" data-category="roses">
 
-                    <img src="rose15.jpg" alt="Софи спрей, 15 роз">
+                <!-- БУКЕТ 3 -->
 
-                    <h3>Букет «Софи спрей». 15 роз</h3>
+                <div
+                    class="product-card"
+                    data-category="roses"
+                >
 
-                    <p class="product-price">6490 ₽</p>
+                    <img
+                        src="rose15.jpg"
+                        alt="Софи спрей, 15 роз"
+                    >
+
+
+                    <h3>
+                        Букет «Софи спрей». 15 роз
+                    </h3>
+
+
+                    <p class="product-price">
+                        6490 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Софи спрей». 15 роз"
                         data-price="6490"
-                        data-image="rose15.jpg">
+                        data-image="rose15.jpg"
+                    >
                         🛒 В корзину
                     </button>
+
 
                 </div>
 
 
-                <div class="product-card" data-category="roses">
 
-                    <img src="red11rose.webp" alt="Алексин спрей ред">
+                <!-- БУКЕТ 4 -->
 
-                    <h3>Букет «Алексин спрей ред». 11 роз</h3>
+                <div
+                    class="product-card"
+                    data-category="roses"
+                >
 
-                    <p class="product-price">3270 ₽</p>
+                    <img
+                        src="red11rose.webp"
+                        alt="Алексин спрей ред"
+                    >
+
+
+                    <h3>
+                        Букет «Алексин спрей ред». 11 роз
+                    </h3>
+
+
+                    <p class="product-price">
+                        3270 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Алексин спрей ред». 11 роз"
                         data-price="3270"
-                        data-image="red11rose.webp">
+                        data-image="red11rose.webp"
+                    >
                         🛒 В корзину
                     </button>
+
 
                 </div>
 
 
-                <div class="product-card" data-category="different">
 
-                    <img src="sun.jpg" alt="Lovely sun">
+                <!-- БУКЕТ 5 -->
 
-                    <h3>Букет «Lovely sun»</h3>
+                <div
+                    class="product-card"
+                    data-category="different"
+                >
 
-                    <p class="product-price">4600 ₽</p>
+                    <img
+                        src="sun.jpg"
+                        alt="Lovely sun"
+                    >
+
+
+                    <h3>
+                        Букет «Lovely sun»
+                    </h3>
+
+
+                    <p class="product-price">
+                        4600 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Lovely sun»"
                         data-price="4600"
-                        data-image="sun.jpg">
+                        data-image="sun.jpg"
+                    >
                         🛒 В корзину
                     </button>
+
 
                 </div>
 
 
-                <div class="product-card" data-category="different">
 
-                    <img src="grand.jpg" alt="Букет Гранд">
+                <!-- БУКЕТ 6 -->
 
-                    <h3>Букет «Гранд»</h3>
+                <div
+                    class="product-card"
+                    data-category="different"
+                >
 
-                    <p class="product-price">7100 ₽</p>
+                    <img
+                        src="grand.jpg"
+                        alt="Букет Гранд"
+                    >
+
+
+                    <h3>
+                        Букет «Гранд»
+                    </h3>
+
+
+                    <p class="product-price">
+                        7100 ₽
+                    </p>
+
 
                     <button
                         class="add-to-cart"
                         data-name="Букет «Гранд»"
                         data-price="7100"
-                        data-image="grand.jpg">
+                        data-image="grand.jpg"
+                    >
                         🛒 В корзину
                     </button>
 
+
                 </div>
+
 
             </div>
 
+
         </section>
+
 
     </main>
 
 
+<div id="cart-message">
+    🌷 Букет добавлен в корзину ❤️
+</div>
+
     <script src="script.js"></script>
+
 
 </body>
 

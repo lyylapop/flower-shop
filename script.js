@@ -1,5 +1,9 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cartCount = document.getElementById("cart-count");
 
+if (cartCount) {
+    cartCount.textContent = cart.length;
+}
 
 // ДОДАВАННЯ ТОВАРУ В КОШИК
 
@@ -39,15 +43,40 @@ buttons.forEach(function(button) {
             image = "grand.jpg";
         }
 
-        cart.push({
-            name: name,
-            price: price,
-            image: image
-        });
+        const existingItem = cart.find(function(item) {
+    return item.name === name;
+});
+
+if (existingItem) {
+
+    existingItem.quantity += 1;
+
+} else {
+
+    cart.push({
+        name: name,
+        price: price,
+        image: image,
+        quantity: 1
+    });
+
+}
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        alert(name + " — " + price + " ₽ добавлен в корзину!");
+        const cartMessage = document.getElementById("cart-message");
+
+if (cartMessage) {
+
+    cartMessage.classList.add("show");
+
+    setTimeout(function() {
+
+        cartMessage.classList.remove("show");
+
+    }, 2500);
+
+}
 
     });
 
@@ -87,10 +116,72 @@ if (cartItems) {
         productName.textContent = item.name;
 
         const productPrice = document.createElement("p");
-        productPrice.textContent = item.price + " ₽";
+       productPrice.textContent =
+    item.price + " ₽ × " + (item.quantity || 1);
 
         productInfo.appendChild(productName);
         productInfo.appendChild(productPrice);
+
+        const quantityBox = document.createElement("div");
+
+quantityBox.classList.add("quantity-box");
+
+const minusButton = document.createElement("button");
+
+minusButton.textContent = "−";
+
+minusButton.classList.add("quantity-button");
+
+const quantityText = document.createElement("span");
+
+quantityText.textContent = item.quantity || 1;
+
+quantityText.classList.add("quantity-number");
+
+const plusButton = document.createElement("button");
+
+plusButton.textContent = "+";
+
+plusButton.classList.add("quantity-button");
+
+
+minusButton.addEventListener("click", function() {
+
+    if ((item.quantity || 1) > 1) {
+
+        item.quantity -= 1;
+
+    } else {
+
+        cart.splice(index, 1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    location.reload();
+
+});
+
+
+plusButton.addEventListener("click", function() {
+
+    item.quantity = (item.quantity || 1) + 1;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    location.reload();
+
+});
+
+
+quantityBox.appendChild(minusButton);
+
+quantityBox.appendChild(quantityText);
+
+quantityBox.appendChild(plusButton);
+
+productInfo.appendChild(quantityBox);
 
 
         // КНОПКА ВИДАЛЕННЯ
@@ -105,7 +196,9 @@ if (cartItems) {
             cart.splice(index, 1);
 
             localStorage.setItem("cart", JSON.stringify(cart));
-
+            if (cartCount) {
+    cartCount.textContent = cart.length;
+}
             location.reload();
 
         });
@@ -122,8 +215,7 @@ if (cartItems) {
 
         // ЗАГАЛЬНА СУМА
 
-        total += Number(item.price);
-
+        total += Number(item.price) * (item.quantity || 1);
     });
 
     cartTotal.textContent = total;

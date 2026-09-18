@@ -1053,3 +1053,167 @@ p {
 
 }
 
+
+/* КРАСИВЫЕ КАРТОЧКИ ТОВАРОВ */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(80, 40, 40, 0.08);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(80, 40, 40, 0.15);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 17px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03);
+}
+
+.product-card h3 {
+    margin: 18px 5px 8px;
+    font-size: 19px;
+    line-height: 1.35;
+    color: #3d3030;
+}
+
+.product-price {
+    margin: 0 5px 16px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #b76e79;
+}
+
+.product-card .add-to-cart {
+    width: 100%;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 12px;
+    background: #b76e79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.product-card .add-to-cart:hover {
+    background: #a45d68;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+    .product-card img {
+        height: 260px;
+    }
+
+    .product-card h3 {
+        font-size: 17px;
+    }
+
+    .product-price {
+        font-size: 19px;
+    }
+
+}
+
+/* КАТЕГОРИИ ТОВАРОВ */
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px auto 35px;
+}
+
+.category-button {
+    border: 1px solid #e8c9cd;
+    padding: 11px 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #5a4545;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.category-button:hover {
+    background: #fff0f2;
+    border-color: #b76e79;
+    transform: translateY(-2px);
+}
+
+.category-button.active {
+    background: #b76e79;
+    border-color: #b76e79;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(183, 110, 121, 0.25);
+}
+
+.category-button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+
+    .category-buttons {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+    .category-button {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+}
+
+#cart-message {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    padding: 15px 22px;
+    background: #ffffff;
+    color: #3d3030;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(80, 40, 40, 0.15);
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+#cart-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+
+    #cart-message {
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        text-align: center;
+    }
+
+}
