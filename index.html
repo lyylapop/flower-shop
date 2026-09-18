@@ -2,415 +2,143 @@
 <html lang="ru">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Flower Shop</title>
-
+    <title>Apple Store | Оригинальная техника</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
     <header class="header">
-
         <div class="logo">
-            🌷 Flower Shop
+            🍏 Apple Store
         </div>
 
-
         <nav class="nav">
-
-            <a href="#">
-                Главная
-            </a>
-
-            <a href="#products">
-                Каталог
-            </a>
-
-            <a href="#">
-                О нас
-            </a>
-
-            <a href="#">
-                Контакты
-            </a>
-
+            <a href="#">Главная</a>
+            <a href="#products">Каталог</a>
+            <a href="https://t.me/Li_ve_Tech">Гарантия</a>
+            <a href="https://t.me/Li_ve_Tech">Контакты</a>
         </nav>
 
-
-       <a href="cart.html" class="cart">
-    🛒 Корзина <span id="cart-count">0</span>
-</a>
-
+        <a href="https://t.me/Li_ve_Tech" class="cart">
+            💬 Консультация в TG
+        </a>
     </header>
-
-
 
     <main>
 
-
         <!-- ГЛАВНЫЙ БЛОК -->
-
         <section class="hero">
-
-
             <div class="hero-content">
-
-
                 <p class="hero-small">
-                    ЦВЕТЫ С ЛЮБОВЬЮ
+                    ОРИГИНАЛЬНАЯ ТЕХНИКА APPLE
                 </p>
-
 
                 <h1>
-                    Цветы, которые<br>
-                    говорят без слов
+                    Техника Apple<br>
+                    по лучшим ценам
                 </h1>
 
-
                 <p class="hero-text">
-                    Красивые букеты для особенных моментов
+                    Новые iPhone, iPad, MacBook, Apple Watch и AirPods с доставкой.
                 </p>
 
-
                 <a href="#products" class="hero-button">
-                    Смотреть букеты
+                    Смотреть каталог
                 </a>
-
-
             </div>
-
 
             <div class="hero-image">
-
-                <img
-                    src="201rose.jpg"
-                    alt="Букет роз"
-                >
-
+                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600" alt="Apple iPhone">
             </div>
-
-
         </section>
-
-
 
         <!-- КАТАЛОГ -->
-
         <section class="products" id="products">
 
+            <h2>Каталог продукции</h2>
 
-            <h2>
-                Наши букеты
-            </h2>
-
-
-            <!-- КАТЕГОРИИ -->
-
+            <!-- КАТЕГОРИИ APPLE -->
             <div class="category-buttons">
-
-
-                <button
-                    class="category-button active"
-                    data-category="all"
-                >
-                    Все
-                </button>
-
-
-                <button
-                    class="category-button"
-                    data-category="roses"
-                >
-                    🌹 Розы
-                </button>
-
-
-                <button
-                    class="category-button"
-                    data-category="peonies"
-                >
-                    🌸 Пионы
-                </button>
-
-
-                <button
-                    class="category-button"
-                    data-category="hydrangeas"
-                >
-                    💐 Гортензии
-                </button>
-
-
-                <button
-                    class="category-button"
-                    data-category="lilies"
-                >
-                    🌷 Лилии
-                </button>
-
-
-                <button
-                    class="category-button"
-                    data-category="different"
-                >
-                    💐 Разные
-                </button>
-
-
+                <button class="category-button active" data-category="all">Все</button>
+                <button class="category-button" data-category="iphone">📱 iPhone</button>
+                <button class="category-button" data-category="macbook">💻 MacBook</button>
+                <button class="category-button" data-category="ipad">📱 iPad</button>
+                <button class="category-button" data-category="watch">⌚ Apple Watch</button>
+                <button class="category-button" data-category="airpods">🎧 AirPods</button>
             </div>
 
-
-
-            <!-- ТОВАРЫ -->
-
+            <!-- ТОВАРЫ (Будем наполнять вместе дальше) -->
             <div class="products-grid">
 
-
-                <!-- БУКЕТ 1 -->
-
-                <div
-                    class="product-card"
-                    data-category="roses"
-                >
-
-                    <img
-                        src="201rose.jpg"
-                        alt="Букет Нежность, 201 роза"
-                    >
-
-
-                    <h3>
-                        Букет «Нежность». 201 роза
-                    </h3>
-
-
-                    <p class="product-price">
-                        22000 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Нежность». 201 роза"
-                        data-price="22000"
-                        data-image="201rose.jpg"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <!-- СЕКЦИЯ IPHONE -->
+                <div class="product-card" data-category="iphone">
+                    <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400" alt="iPhone 15 Pro Max">
+                    <h3>iPhone 15 Pro Max 256GB</h3>
+                    <p class="product-price">125 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20iPhone%2015%20Pro%20Max" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
 
-
-
-                <!-- БУКЕТ 2 -->
-
-                <div
-                    class="product-card"
-                    data-category="roses"
-                >
-
-                    <img
-                        src="11rose.jpg"
-                        alt="Алексин"
-                    >
-
-
-                    <h3>
-                        Букет «Алексин». 11 роз
-                    </h3>
-
-
-                    <p class="product-price">
-                        3475 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Алексин». 11 роз"
-                        data-price="3475"
-                        data-image="11rose.jpg"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <div class="product-card" data-category="iphone">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400" alt="iPhone 15">
+                    <h3>iPhone 15 128GB</h3>
+                    <p class="product-price">79 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20iPhone%2015" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
 
-
-
-                <!-- БУКЕТ 3 -->
-
-                <div
-                    class="product-card"
-                    data-category="roses"
-                >
-
-                    <img
-                        src="rose15.jpg"
-                        alt="Софи спрей, 15 роз"
-                    >
-
-
-                    <h3>
-                        Букет «Софи спрей». 15 роз
-                    </h3>
-
-
-                    <p class="product-price">
-                        6490 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Софи спрей». 15 роз"
-                        data-price="6490"
-                        data-image="rose15.jpg"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <!-- СЕКЦИЯ MACBOOK -->
+                <div class="product-card" data-category="macbook">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400" alt="MacBook Pro 14">
+                    <h3>MacBook Pro 14 M3 512GB</h3>
+                    <p class="product-price">185 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20MacBook%20Pro%2014%20M3" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
 
-
-
-                <!-- БУКЕТ 4 -->
-
-                <div
-                    class="product-card"
-                    data-category="roses"
-                >
-
-                    <img
-                        src="red11rose.webp"
-                        alt="Алексин спрей ред"
-                    >
-
-
-                    <h3>
-                        Букет «Алексин спрей ред». 11 роз
-                    </h3>
-
-
-                    <p class="product-price">
-                        3270 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Алексин спрей ред». 11 роз"
-                        data-price="3270"
-                        data-image="red11rose.webp"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <!-- СЕКЦИЯ IPAD -->
+                <div class="product-card" data-category="ipad">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400" alt="iPad Air M2">
+                    <h3>iPad Air 11" M2 128GB</h3>
+                    <p class="product-price">68 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20iPad%20Air%20M2" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
 
-
-
-                <!-- БУКЕТ 5 -->
-
-                <div
-                    class="product-card"
-                    data-category="different"
-                >
-
-                    <img
-                        src="sun.jpg"
-                        alt="Lovely sun"
-                    >
-
-
-                    <h3>
-                        Букет «Lovely sun»
-                    </h3>
-
-
-                    <p class="product-price">
-                        4600 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Lovely sun»"
-                        data-price="4600"
-                        data-image="sun.jpg"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <!-- СЕКЦИЯ WATCH -->
+                <div class="product-card" data-category="watch">
+                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=400" alt="Apple Watch Ultra 2">
+                    <h3>Apple Watch Ultra 2</h3>
+                    <p class="product-price">82 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20Apple%20Watch%20Ultra%202" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
 
-
-
-                <!-- БУКЕТ 6 -->
-
-                <div
-                    class="product-card"
-                    data-category="different"
-                >
-
-                    <img
-                        src="grand.jpg"
-                        alt="Букет Гранд"
-                    >
-
-
-                    <h3>
-                        Букет «Гранд»
-                    </h3>
-
-
-                    <p class="product-price">
-                        7100 ₽
-                    </p>
-
-
-                    <button
-                        class="add-to-cart"
-                        data-name="Букет «Гранд»"
-                        data-price="7100"
-                        data-image="grand.jpg"
-                    >
-                        🛒 В корзину
-                    </button>
-
-
+                <!-- СЕКЦИЯ AIRPODS -->
+                <div class="product-card" data-category="airpods">
+                    <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=400" alt="AirPods Max">
+                    <h3>AirPods Max</h3>
+                    <p class="product-price">58 000 ₽</p>
+                    <a href="https://t.me/Li_ve_Tech?text=Здравствуйте,%20хочу%20заказать%20AirPods%20Max" class="hero-button" style="display:block; text-align:center; padding: 10px; text-decoration:none;">
+                        🛒 Купить в Telegram
+                    </a>
                 </div>
-
 
             </div>
 
-
         </section>
-
 
     </main>
 
-
-<div id="cart-message">
-    🌷 Букет добавлен в корзину ❤️
-</div>
-
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
