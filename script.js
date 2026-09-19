@@ -1,23 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const categoryButtons = document.querySelectorAll('.category-button');
-    const productCards = document.querySelectorAll('.product-card');
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".category-button");
+    const cards = document.querySelectorAll(".product-card");
 
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Удаляем класс active у всех кнопок
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // Добавляем класс active текущей кнопке
-            button.classList.add('active');
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Переключение активной кнопки
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
 
-            const category = button.getAttribute('data-category');
+            const filter = button.getAttribute("data-category");
 
-            // Показываем или скрываем карточки товаров
-            productCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                if (category === 'all' || cardCategory === category) {
-                    card.style.display = 'block';
+            // Фильтрация карточек
+            cards.forEach(card => {
+                if (filter === "all") {
+                    card.style.display = "flex";
                 } else {
-                    card.style.display = 'none';
+                    const categories = card.getAttribute("data-category").split(" ");
+                    if (categories.includes(filter)) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
                 }
             });
         });
